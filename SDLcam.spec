@@ -14,7 +14,7 @@ URL:		http://raph.darktech.org/SDLcam/
 BuildRequires:	SDL-devel >= 1.2.4
 BuildRequires:	SDL_image-devel >= 1.2.2
 BuildRequires:	SDL_ttf-devel >= 2.0.5
-BuildRequires:	avifile-devel >= 0.7.15
+BuildRequires:	avifile-devel >= 3:0.7.15
 BuildRequires:	divx4linux-devel
 BuildRequires:	libfame-devel >= 0.8.10-2
 BuildRequires:	libxml2-devel >= 2.4.24
