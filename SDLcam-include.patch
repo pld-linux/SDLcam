@@ -1,0 +1,26 @@
+diff -urN SDLcam-0.7.3.orig/Makefile SDLcam-0.7.3/Makefile
+--- SDLcam-0.7.3.orig/Makefile	Thu Oct  3 14:07:46 2002
++++ SDLcam-0.7.3/Makefile	Thu Oct  3 14:08:14 2002
+@@ -52,7 +52,7 @@
+ 	- $(CC) $(FEATURES) -g -fPIC -shared -o $@ $? -ldivxencore
+ 
+ capture/divx2.so: capture/divx2.cpp
+-	- $(CPP) $(FEATURES) -g -fPIC -shared -o $@ $?
++	- $(CPP) $(FEATURES) -g -I/usr/X11R6/include -fPIC -shared -o $@ $?
+ 
+ SDLcam: $(OBJS)
+ 	$(LD) $(LDFLAGS) $(OBJS) -o $(PROG) 
+diff -urN SDLcam-0.7.3.orig/capture/divx.c SDLcam-0.7.3/capture/divx.c
+--- SDLcam-0.7.3.orig/capture/divx.c	Thu Oct  3 14:07:46 2002
++++ SDLcam-0.7.3/capture/divx.c	Thu Oct  3 14:08:29 2002
+@@ -7,8 +7,8 @@
+ #include <fcntl.h>
+ #include <errno.h>
+ 
+-#include <encore2.h>
+-#include <decore.h>
++#include <divx/encore2.h>
++#include <divx/decore.h>
+ 
+ #define CHUNK_SIZE 1024
+ 
