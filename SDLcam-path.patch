@@ -52,3 +52,17 @@ diff -urN SDLcam-0.7.3.orig/interface.cpp SDLcam-0.7.3/interface.cpp
  		return;
  		}
  	fprintf(stderr, "Could not find/open SDLcam.xml. Aborting\n");
+diff -urN SDLcam-0.7.3.orig/main.cpp SDLcam-0.7.3/main.cpp
+--- SDLcam-0.7.3.orig/main.cpp	Thu Oct  3 14:07:46 2002
++++ SDLcam-0.7.3/main.cpp	Thu Oct  3 14:51:30 2002
+@@ -89,8 +89,8 @@
+ 		}}}
+ 	if (neu == NULL) {{{
+ 		newInput  make = NULL;
+-		char *TYPE = (char*) xMalloc (strlen ("sources/.so") + strlen (type) + 2);
+-		sprintf(TYPE, "sources/%s.so", type);
++		char *TYPE = (char*) xMalloc (strlen ("/usr/X11R6/lib/SDLcam/sources/.so") + strlen (type) + 2);
++		sprintf(TYPE, "/usr/X11R6/lib/SDLcam/sources/%s.so", type);
+ 		void *handle = dlopen (TYPE, RTLD_NOW);
+ 		free (TYPE);
+ 		if (handle == NULL) {
