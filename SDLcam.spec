@@ -18,7 +18,6 @@ BuildRequires:	libfame-devel >= 0.8.10-2
 BuildRequires:	libxml2-devel >= 2.4.24
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _prefix         /usr/X11R6 
 
 %description
 SDLcam is a simple Video4Linux program, that was designed to view
