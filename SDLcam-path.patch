@@ -1,0 +1,54 @@
+diff -urN SDLcam-0.7.3.orig/SDL_v4l_filters.c SDLcam-0.7.3/SDL_v4l_filters.c
+--- SDLcam-0.7.3.orig/SDL_v4l_filters.c	Mon Sep  9 17:10:46 2002
++++ SDLcam-0.7.3/SDL_v4l_filters.c	Mon Sep  9 17:13:24 2002
+@@ -310,8 +310,8 @@
+ 	g_filter_stats.reorder_radius 	= 45;
+ 	g_filter_stats.reorder_effekt 	= 0.8;
+ 	g_filter_stats.plugin      		= NULL;
+-	Fetch_Plugins ("/usr/local/lib/SDLcam/filters", 0);
+-	Fetch_Plugins ("/usr/local/lib/SDLcam/capture", 1);
++	Fetch_Plugins ("/usr/X11R6/lib/SDLcam/filters", 0);
++	Fetch_Plugins ("/usr/X11R6/lib/SDLcam/capture", 1);
+ 	Fetch_Plugins ("./filter" , 0);
+ 	Fetch_Plugins ("./capture", 1);
+ 	printf("Done!\n");
+diff -urN SDLcam-0.7.3.orig/SDLcam.xml SDLcam-0.7.3/SDLcam.xml
+--- SDLcam-0.7.3.orig/SDLcam.xml	Mon Sep  9 17:10:46 2002
++++ SDLcam-0.7.3/SDLcam.xml	Mon Sep  9 17:12:52 2002
+@@ -124,7 +124,7 @@
+ 			<Spezial  tab="4"  font="2" left="100"	top="50"  name="reorder"	fg="green"/>
+ 
+ 			<Source  tab="5"  font="2" left="84"	top="50"  device="/dev/v4l/video0" fg="green" type="Webcam" width="320" height="240">Philips</Source>
+-			<Source	 tab="5"  font="2" left="0"	top="50"  device="/usr/local/share/SDLcam/smpte.jpeg" fg="green" type="jpeg" >Jpeg</Source>
++			<Source	 tab="5"  font="2" left="0"	top="50"  device="/usr/X11R6/share/SDLcam/smpte.jpeg" fg="green" type="jpeg" >Jpeg</Source>
+ 		</Elements>
+ 	</GUILayout>
+ </SDLcam>
+diff -urN SDLcam-0.7.3.orig/configuration.h SDLcam-0.7.3/configuration.h
+--- SDLcam-0.7.3.orig/configuration.h	Mon Sep  9 17:10:46 2002
++++ SDLcam-0.7.3/configuration.h	Mon Sep  9 17:13:40 2002
+@@ -24,7 +24,7 @@
+ #endif
+ 
+ 
+-#define RESSOURCE_PATH "/usr/local/share/SDLcam/"
++#define RESSOURCE_PATH "/usr/X11R6/share/SDLcam/"
+ 
+ #define DEFAULT_CAPTURE_RATE 20
+ 
+diff -urN SDLcam-0.7.3.orig/interface.cpp SDLcam-0.7.3/interface.cpp
+--- SDLcam-0.7.3.orig/interface.cpp	Mon Sep  9 17:10:46 2002
++++ SDLcam-0.7.3/interface.cpp	Mon Sep  9 17:12:19 2002
+@@ -719,10 +719,10 @@
+ 		XML_Theme ("SDLcam.xml");
+ 		return;
+ 		}
+-	tmp_file = fopen("/usr/local/share/SDLcam/SDLcam.xml", "r");
++	tmp_file = fopen("/usr/X11R6/share/SDLcam/SDLcam.xml", "r");
+ 	if (tmp_file != NULL) {
+ 		fclose(tmp_file);
+-		XML_Theme ("/usr/local/share/SDLcam/SDLcam.xml");
++		XML_Theme ("/usr/X11R6/share/SDLcam/SDLcam.xml");
+ 		return;
+ 		}
+ 	fprintf(stderr, "Could not find/open SDLcam.xml. Aborting\n");
