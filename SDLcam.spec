@@ -2,10 +2,11 @@ Summary:	Simple V4L program designed to view and process video streams
 Summary(pl):	Narzêdzie do ogl±dania i przetwarzania strumieni video z urz±dzeñ v4l
 Name:		SDLcam
 Version:	0.7.3
-Release:	1
+Release:	2
 License:	GPL
 Source0:	http://raph.darktech.org/SDLcam/%{name}-%{version}.tar.gz
 Patch0:		%{name}-path.patch
+Patch1:		%{name}-include.patch
 URL:		http://raph.darktech.org/SDLcam/
 Group:		X11/Applications/Multimedia
 BuildRequires:	SDL-devel >= 1.2.4
@@ -37,6 +38,7 @@ rzeczywistym obraz.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__make}
