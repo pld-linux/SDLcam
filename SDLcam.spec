@@ -9,16 +9,16 @@ Source0:	http://raph.darktech.org/SDLcam/%{name}-%{version}.tar.gz
 # Source0-md5:	82b7d7e7e6f4d6fe1cd2c4ab97232fd8
 Patch0:		%{name}-path.patch
 Patch1:		%{name}-include.patch
+Patch2:		%{name}-gcc33.patch
 URL:		http://raph.darktech.org/SDLcam/
 BuildRequires:	SDL-devel >= 1.2.4
 BuildRequires:	SDL_image-devel >= 1.2.2
 BuildRequires:	SDL_ttf-devel >= 2.0.5
 BuildRequires:	avifile-devel >= 0.7.15
-BuildRequires:	divx4linux
+BuildRequires:	divx4linux-devel
 BuildRequires:	libfame-devel >= 0.8.10-2
 BuildRequires:	libxml2-devel >= 2.4.24
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 SDLcam is a simple Video4Linux program, that was designed to view
@@ -39,9 +39,11 @@ rzeczywistym obraz.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
-%{__make}
+%{__make} \
+	FEATURES="%{rpmcflags} -DMMX -DTIMER"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -59,7 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGELOG LICENSE README TODO
+%doc CHANGELOG README TODO
 %attr(755,root,root) %{_bindir}/SDLcam
-%{_datadir}/SDLcam
 %attr(755,root,root) %{_libdir}/SDLcam
+%{_datadir}/SDLcam
