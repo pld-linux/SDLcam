@@ -5,6 +5,7 @@ Version:	0.7.3
 Release:	2
 License:	GPL
 Source0:	http://raph.darktech.org/SDLcam/%{name}-%{version}.tar.gz
+# Source0-md5:	82b7d7e7e6f4d6fe1cd2c4ab97232fd8
 Patch0:		%{name}-path.patch
 Patch1:		%{name}-include.patch
 URL:		http://raph.darktech.org/SDLcam/
