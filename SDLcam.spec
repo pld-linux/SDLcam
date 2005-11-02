@@ -17,6 +17,7 @@ BuildRequires:	SDL_ttf-devel >= 2.0.5
 BuildRequires:	avifile-devel >= 3:0.7.15
 BuildRequires:	divx4linux-devel
 BuildRequires:	libfame-devel >= 0.8.10-2
+BuildRequires:	libstdc++-devel
 BuildRequires:	libxml2-devel >= 2.4.24
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
