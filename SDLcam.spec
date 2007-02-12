@@ -1,5 +1,5 @@
 Summary:	Simple V4L program designed to view and process video streams
-Summary(pl.UTF-8):   Narzędzie do oglądania i przetwarzania strumieni video z urządzeń v4l
+Summary(pl.UTF-8):	Narzędzie do oglądania i przetwarzania strumieni video z urządzeń v4l
 Name:		SDLcam
 Version:	0.7.3
 Release:	2
