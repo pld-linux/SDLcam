@@ -1,5 +1,5 @@
 Summary:	Simple V4L program designed to view and process video streams
-Summary(pl):	Narzêdzie do ogl±dania i przetwarzania strumieni video z urz±dzeñ v4l
+Summary(pl.UTF-8):   NarzÄ™dzie do oglÄ…dania i przetwarzania strumieni video z urzÄ…dzeÅ„ v4l
 Name:		SDLcam
 Version:	0.7.3
 Release:	2
@@ -28,12 +28,12 @@ simple user interface. SDLcam can save snapshots in Jpeg, PNG or BMP
 formats. It also has a lot of video filters that can be combined and
 applied in real time to the video stream.
 
-%description -l pl
-Program SDLcam przeznaczony jest do ogl±dania i przetwarzania
-strumienia video pochodz±cego ze ¼ród³a kompatybilnego z v4l - w
-szczególno¶ci kamer USB firmy Philips. Posiada prosty interfejs
-u¿ytkownika, potrafi zapisywaæ zrzuty w formacie JPEG, PNG i BMP.
-Posiada wiele filtrów, które mo¿na ³±czyæ i przetwarzaæ nimi w czasie
+%description -l pl.UTF-8
+Program SDLcam przeznaczony jest do oglÄ…dania i przetwarzania
+strumienia video pochodzÄ…cego ze ÅºrÃ³dÅ‚a kompatybilnego z v4l - w
+szczegÃ³lnoÅ›ci kamer USB firmy Philips. Posiada prosty interfejs
+uÅ¼ytkownika, potrafi zapisywaÄ‡ zrzuty w formacie JPEG, PNG i BMP.
+Posiada wiele filtrÃ³w, ktÃ³re moÅ¼na Å‚Ä…czyÄ‡ i przetwarzaÄ‡ nimi w czasie
 rzeczywistym obraz.
 
 %prep
